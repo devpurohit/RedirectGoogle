@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "FunSwitch",
+    "description": "Assignment For FunSwitch",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.google.com/"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "webNavigation",
+        "http://*/",
+        "https://*/"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    }
+}
